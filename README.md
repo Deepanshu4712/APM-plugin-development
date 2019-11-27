@@ -46,7 +46,7 @@ Before starting, a few points to keep in mind.
      
      >   <Match "regex">
      
-     >    Plugin "cpu_static|disk_stat|ram_util|cpu_util|tcp_stats|nic_stats|*<service_name>*"
+     >    Plugin "cpu_static|disk_stat|*<service_name>*"
      
      >   </Match>
      
@@ -66,7 +66,7 @@ Before starting, a few points to keep in mind.
 
         sudo vi /opt/configurator-exporter/config_handler/mapping/metrics_plugin_mapping.yaml
         
-7. Since the controller cannot communicate with the configurator exporter (as per the current design) , make the similar changes in the controller mapping file as well under:
+7. Since the controller cannot communicate with the configurator exporter (as per the current design) , make the similar changes in the controller mapping file inside the APM server as well under:
     
         sudo vi /home/deepinsight/deepInsight/deepinsight/metrics_plugins_mapping.yaml
         
