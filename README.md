@@ -24,7 +24,7 @@ Before starting, a few points to keep in mind.
 
 1. Create a <<service_name>>.py file under /opt/collectd/plugins/.
 
-2. Create a <<service_name>>.conf file and place it under /opt/collectd/conf/. Checkout sample configuration file under _Samples_ section below. 
+2. Create a <<service_name>>.conf file and place it under /opt/collectd/conf/. Checkout sample configuration file under [_Samples_](Samples) section below. 
 
 3. Include the configuration file in collectd.conf under 
 
@@ -83,3 +83,20 @@ Before starting, a few points to keep in mind.
 After the successful completion of the above mentioned steps without any error, check the logs under 
 
         vi /tmp/collectd.log
+        
+   
+## Samples
+1. service.conf file example:
+
+       <Plugin python>
+        ModulePath "/opt/collectd/plugins"
+        LogTraces true
+        Interactive false
+        Import "service_name"
+
+        <Module service_name>
+            interval "300"
+            <<mention other inputs required from the UI in same format as "port">>
+            port "9100"
+        </Module>
+       </Plugin>
