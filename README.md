@@ -24,7 +24,7 @@ Before starting, a few points to keep in mind.
 
 1. Create a <<service_name>>.py file under /opt/collectd/plugins/.
 
-2. Create a <<service_name>>.conf file and place it under /opt/collectd/conf/. Checkout sample configuration file under [_Samples_](Samples) section below. 
+2. Create a <<service_name>>.conf file and place it under /opt/collectd/conf/. Checkout sample configuration file under [_Samples_](https://github.com/Deepanshu4712/APM-plugin-development/blob/master/README.md#samples) section below. 
 
 3. Include the configuration file in collectd.conf under 
 
